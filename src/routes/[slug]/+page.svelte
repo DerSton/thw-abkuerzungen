@@ -27,6 +27,12 @@
 	title={`${entry.abbreviation} - Bedeutung | HIOrg Abkürzungsverzeichnis`}
 	description={`Was bedeutet ${entry.abbreviation}? Hier findest du die Bedeutung: ${entry.meaning}.`}
 	canonical={`https://hiorg-abkuerzungen.de/${slugify(`${entry.abbreviation} ${entry.meaning}`)}`}
+	openGraph={{
+		title: `${entry.abbreviation} - Bedeutung | HIOrg Abkürzungsverzeichnis`,
+		description: `Was bedeutet ${entry.abbreviation}? Hier findest du die Bedeutung: ${entry.meaning}.`,
+		url: `https://hiorg-abkuerzungen.de/${slugify(`${entry.abbreviation} ${entry.meaning}`)}`,
+		type: 'article'
+	}}
 />
 
 <h1 class="h1 mb-4">{entry.abbreviation}</h1>

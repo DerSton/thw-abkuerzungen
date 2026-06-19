@@ -25,6 +25,14 @@
 	title="HIOrg Abkürzungsverzeichnis"
 	description="Verzeichnis von Abkürzungen im Katastrophenschutz, THW, Feuerwehr und Sanitätsdiensten."
 	canonical="https://hiorg-abkuerzungen.de/"
+	openGraph={{
+		title: 'HIOrg Abkürzungsverzeichnis',
+		description:
+			'Verzeichnis von Abkürzungen im Katastrophenschutz, THW, Feuerwehr und Sanitätsdiensten.',
+		url: 'https://hiorg-abkuerzungen.de/',
+		type: 'website',
+		site_name: 'HIOrg Abkürzungsverzeichnis'
+	}}
 />
 
 <h1 class="h1 mb-4">Abbreviations</h1>
