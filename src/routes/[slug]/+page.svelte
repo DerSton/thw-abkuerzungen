@@ -1,8 +1,25 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
+	import type { DefinedTerm, WithContext } from 'schema-dts';
+
 	let { data } = $props();
 	let entry = $derived(data.entry);
+
+	let schema = $derived<WithContext<DefinedTerm>>({
+		'@context': 'https://schema.org',
+		'@type': 'DefinedTerm',
+		name: entry.abbreviation,
+		termCode: entry.abbreviation,
+		description: entry.meaning,
+		inDefinedTermSet: 'https://hiorg-abkuerzungen.de/'
+	});
 </script>
+
+<svelte:head>
+	<svelte:element this={"script"} type="application/ld+json">
+		{JSON.stringify(schema)}
+	</svelte:element>
+</svelte:head>
 
 <h1 class="h1 mb-4">{entry.abbreviation}</h1>
 <p class="mb-2"><strong>Meaning:</strong> {entry.meaning}</p>
